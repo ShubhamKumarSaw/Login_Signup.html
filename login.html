@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+      
+        *{
+            margin: 0;
+            padding: o;
+        }
+
+        .container{
+    height: 100vh;
+    width: 100%;
+    background-color:cadetblue;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+ }
+
+        #heading{
+            background-color:coral;
+        }
+
+        #photo{
+            height: 204px;
+            width:204px;
+            border-radius: 50%;
+            border-color: rgb(121, 76, 76)
+             }
+
+        #form{
+    margin-bottom: 30px;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+
+        .button{
+            background-color: rgb(36, 36, 112);
+        }
+
+        header{
+            margin: 0;
+            padding:10px 10px 10px 10px;
+            background-color: burlywood;
+            text-align: center;
+            color:rgb(2, 2, 39);
+         }
+
+    #user,#email,#password,#password1{
+        border-radius: 10px ;
+        height: 30px;
+        width:200px;
+        border-style: double;  
+        border-color: rgb(121, 76, 76)
+             }
+    
+</style>
+</head>
+<body>
+    <header>
+<h1>Total solution Academy
+    <br>A place for Enhancing Future<h1>
+</header>
+<div class="container">  
+     <h2 id="heading">Welcome to Sign Up & Login page <h2>
+ <div id="form">
+     <h1 id="head"> Login Page</h1>
+     <image  id="photo"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyaNNiVn8jNWKXjcQgzVn87j80ZQhmwIs5b2FdeUK2nA&s"></image>
+ <form id="help">
+    <label for="email"></label>
+    User_Name:<br><input type="text"id="user" placeholder="name"><br>
+    Email:<br><input type="text" id="email" placeholder="email"required><br>
+    <label for="password"></label>
+    Password:<br><input type="password" id="password"placeholder="Enter password"required><br>
+    <div id="pass"> Confirm Password:<br><input type="password" id="password1"placeholder="Enter password"><br></div>
+    <input type="checkbox"  >Remember Me<span> <a href="#"> Forget password?</a></span><br> 
+    <input type="submit" id="Log_in"class="button" value="Submit" >
+    <div id="sign"> Already have an Account</div> <button id="Sign_up" class="button">Sign Up</button> 
+  </form>
+ </div>
+</div>
+
+ <script>
+   let loginbtn = document.getElementById("Log_in")
+   let signupbtn = document.getElementById("Sign_up")
+   let title=document.getElementById("head")
+
+
+  signupbtn.onclick = function(){
+  if(title.innerHTML==="Sign Up"){
+    title.innerHTML = "Login Page "
+    document.getElementById('pass').style.display="block"
+    document.getElementById("sign").innerHTML="Create an account"
+    document.getElementById("Sign_up").innerText="Sign up"
+ }
+  else{
+    title.innerHTML="Sign Up";
+    document.getElementById('pass').style.display="none"
+    document.getElementById("sign").innerHTML="Create an Account"
+    document.getElementById("Sign_up").innerText="Login"
+  }
+
+}
+
+let Username=document.getElementById("user")
+let email=document.getElementById("email")
+let password=document.getElementById("password")
+
+loginbtn.onclick=function(){
+    event.preventDefault();
+    if(Username.value===""|| password.Value===""||email.value===""||password1.Value===""){
+       alert(`Fill all the details`)
+       return false;
+    }
+       
+     if(password.Value===""!== password1.Value===""){
+        alert(`password not matched`)
+        return false;
+     }   
+        
+       //alert("Form Submitted Successfuly")
+       
+      
+  window.location.href="https://www.justdial.com/Hazaribagh/Total-Solution-Academy/9999P6546-6546-220319214601-A3U9_BZDET";
+    }
+</script>
+</body>
+</html>
+
